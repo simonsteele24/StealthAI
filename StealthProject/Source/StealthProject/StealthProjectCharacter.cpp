@@ -119,7 +119,7 @@ void AStealthProjectCharacter::MoveForward(float Value)
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
 		// get forward vector
-		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		const FVector Direction = FVector(1,0,0);
 		AddMovementInput(Direction, Value);
 	}
 }
@@ -133,7 +133,7 @@ void AStealthProjectCharacter::MoveRight(float Value)
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
 	
 		// get right vector 
-		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		const FVector Direction = FVector(0,1,0);
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
