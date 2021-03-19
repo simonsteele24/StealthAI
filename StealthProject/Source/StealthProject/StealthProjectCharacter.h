@@ -29,16 +29,16 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-protected:
-
-	/** Resets HMD orientation in VR. */
-	void OnResetVR();
-
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
+
+protected:
+
+	/** Resets HMD orientation in VR. */
+	void OnResetVR();
 
 	/** 
 	 * Called via input to turn at a given rate. 
